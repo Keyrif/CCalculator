@@ -14,10 +14,6 @@ int main() {
     return 0;
   }
   
-  if (operator != '+' && '-' && '*' && '/') {
-    printf("ERROR: No operator!");
-    return 0;
-  }
 
   if (inputs == 3 && (operator == '+' || operator == '-' || operator == '*' || operator == '/')) {
     printf("> ");
@@ -26,7 +22,9 @@ int main() {
     if (operator == '*') printf("Result: %d", input1 * input2);
     if (operator == '/') printf("Result: %d", input1 / input2);
   } else {
-    puts("ERROR: There are not enough numbers.");
+    puts("ERROR: There are not enough numbers or operator is invalid!");
   }
   
 }
+
+//KRFX
