@@ -9,17 +9,24 @@ int main() {
   printf("> ");
   int inputs = scanf("%d %c %d", &input1, &operator, &input2);
 
-  if (inputs == 3) {
+  if (inputs != 3){
+    printf("ERROR: Invalid number(s)!");
+    return 0;
+  }
+  
+  if (operator != '+' && '-' && '*' && '/') {
+    printf("ERROR: No operator!");
+    return 0;
+  }
+
+  if (inputs == 3 && (operator == '+' || operator == '-' || operator == '*' || operator == '/')) {
     printf("> ");
     if (operator == '+') printf("Result: %d", input1 + input2);
     if (operator == '-') printf("Result: %d", input1 - input2);
     if (operator == '*') printf("Result: %d", input1 * input2);
     if (operator == '/') printf("Result: %d", input1 / input2);
   } else {
-    puts("There are not enough inputs.");
+    puts("ERROR: There are not enough numbers.");
   }
   
 }
-
-
-//KRFX
