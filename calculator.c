@@ -15,12 +15,15 @@ int main() {
   }
   
 
-  if (inputs == 3 && (operator == '+' || operator == '-' || operator == '*' || operator == '/')) {
+  if (operator == '+' || operator == '-' || operator == '*' || operator == '/') {
     printf("> ");
-    if (operator == '+') printf("Result: %d", input1 + input2);
-    if (operator == '-') printf("Result: %d", input1 - input2);
-    if (operator == '*') printf("Result: %d", input1 * input2);
-    if (operator == '/') printf("Result: %d", input1 / input2);
+    if (operator == '+') printf("Result: %d", input1 + input2); else if (operator == '-') {
+      printf("Result: %d", input1 - input2);
+    } else if (operator == '*') { 
+      printf("Result: %d", input1 * input2);
+    } else if (operator == '/') {
+      printf("Result: %d", input1 / input2);
+    }
   } else {
     puts("ERROR: There are not enough numbers or operator is invalid!");
   }
